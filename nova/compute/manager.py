@@ -6669,7 +6669,7 @@ class _ComputeV4Proxy(object):
     def detach_volume(self, ctxt, volume_id, instance):
         # NOTE(danms): Pass instance by kwarg to help the object_compat
         # decorator, as real RPC dispatch does.
-        return self.manager.detach_volume(ctxt, volume_id, instance=instance)
+        return self.manager.detach_volume(ctxt, volume_id=volume_id, instance=instance)
 
     def finish_resize(self, ctxt, disk_info, image, instance,
                       reservations, migration):
